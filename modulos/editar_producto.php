@@ -14,36 +14,36 @@ if($stmt = $mysqli->prepare($strsql)){
         <div class="alert container">
             <form class="" method="POST">
                 <div class="row">
-                    <div class="mb-3">
+                    <div class="col">
                         <label>Nombre del Producto</label>
                         <input name="nombre_producto" type="text" class="validate">
                         <?php echo $nombre_producto ?>
                     </div>
-                    <div class="mb-3">
+                    <div class="col">
                         <input name="idcategoria" type="text" class="validate">
                         <?php echo $categoria ?>
                         <label>ID de Categoria</label>
                     </div>
-                    <div class="mb-3">
+                    <div class="col">
+                        <label>Descripcion del Producto</label>
                         <input name="descripcion" type="text" class="validate">
                         <?php echo $descripcion?>
-                        <label>Descripcion del Producto</label>
                     </div>
                 </div>
                 <div class="row">
-                <div class="mb-3">
+                <div class="col">
+                        <label>URL de Imagen</label>
                         <input name="url_imagen" type="text" class="validate">
                         <?php echo $url_imagen ?>
-                        <label>URL de Imagen</label>
                     </div>
-                    <div class="mb-3">
+                    <div class="col">
+                        <label>Precio</label>
                         <input name="precio" type="text" class="validate">
                         <?php echo $precio ?>
-                        <label>Precio</label>
                     </div>
-                    <div class="mb-3">
-                        <input name="cantidad" type="text" class="validate">
+                    <div class="col">
                         <label>Cantidad</label>
+                        <input name="cantidad" type="text" class="validate">
                         <?php echo $cantidad ?>
                     </div>
                     <button class="btn btn-primary" type="submit" name="edit">Actualizar Información de Producto

@@ -3,42 +3,40 @@ global $mysqli;
 global $urlweb;
 ?>
 
-<div class="container">
-    <form class="col s12" method="POST">
-        <div class="row">
-            <div class="input-field col l4 m4 s6">
-                <input name="nombre_producto" type="text" class="validate">
+<div class="alert container col-md-6 col-md-offset-3 ">
+    <form class="" method="POST">
+        <div class="container row ">
+            <div class="mb-3">
                 <label>Nombre del Producto</label>
+                <input class="form-control" name="nombre_producto" type="text" class="validate">
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="idcategoria" type="text" class="validate">
-                <label>ID de Producto</label>
+            <div class="mb-3">
+                <label>Id Categoria</label>
+                <input class="form-control" name="idcategoria" type="text" class="validate">
             </div>
-            <div class="input-field col l6 m6 s12">
-                <input name="descripcion" type="text" class="validate">
+            <div class="mb-3">
                 <label>Descripcion del Producto</label>
+                <textarea  class="form-control" name="descripcion" type="text" class="validate"></textarea>
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="url_imagen" type="text" class="validate">
+            <div class="mb-3">
                 <label>URL de Imagen</label>
+                <input class="form-control" name="url_imagen" type="text" class="validate">
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="precio" type="text" class="validate">
+            <div class="mb-3">
                 <label>Precio</label>
+                <input class="form-control" name="precio" type="text" class="validate">
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="cantidad" type="text" class="validate">
+            <div class="mb-3 col-lg-8">
                 <label>Cantidad</label>
+                <input class="form-control" name="cantidad" type="text" class="validate">
             </div>
-            
-            <button class="btn waves-effect waves-light" type="submit" name="agregar">Agregar Producto
-                <i class="material-icons right">send</i>
+            <button class="btn btn-success " type="submit" name="agregar">Agregar Producto
+                <i class="bi bi-send-fill"></i>
             </button>
-            
         </div>
     </form>
-    <div>
-        <a class="waves-effect waves-light btn-small" href="?modulo=admin_producto">Volver a Admin</a>
+    <div class="alert container col-md-6 col-md-offset-3">
+        <a class="btn btn-primary col-lg-9" href="?modulo=admin_producto"><i class="bi bi-arrow-left"></i> Volver atras</a>
     </div>
 </div>
 
