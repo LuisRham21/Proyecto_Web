@@ -9,7 +9,7 @@ $accion = isset($_GET['accion']) ? $_GET['accion']:"default";
             $data = json_decode($json);
 
             if(isset($data)){
-                $strsql = "DELETE FROM categoria WHERE idcategoria = ?";
+                $strsql = "DELETE FROM categorias WHERE idcategoria = ?";
                 $stmt = $mysqli->prepare($strsql);
                 $stmt->bind_param("i", $data->idcategoria);
                 $stmt->execute();

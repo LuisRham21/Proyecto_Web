@@ -89,7 +89,7 @@ global $mysqli
         <h2 class="text-center"> ¿Qué marca de celular estás buscando? </h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <?php
-            $strsql = "SELECT `idcategoria`, `nombre_categoria`, `url_img` FROM `categorias` LIMIT 4";
+            $strsql = "SELECT `idcategoria`, `nombre_categoria`, `url_imagen` FROM `categorias` LIMIT 4";
             if ($stmt = $mysqli->prepare($strsql)){
               $stmt->execute();
               $stmt->store_result();
