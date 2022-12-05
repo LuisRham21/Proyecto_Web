@@ -11,37 +11,37 @@ if($stmt = $mysqli->prepare($strsql)){
         $stmt->bind_result($idproducto, $nombre_producto, $categoria, $descripcion, $url_imagen, $precio, $cantidad);
         $stmt->fetch();
         ?>
-        <div class="container">
-            <form class="col s12" method="POST">
+        <div class="alert container">
+            <form class="" method="POST">
                 <div class="row">
-                    <div class="col l4 m4 s6">
+                    <div class="mb-3">
+                        <label>Nombre del Producto</label>
                         <input name="nombre_producto" type="text" class="validate">
                         <?php echo $nombre_producto ?>
-                        <label>Nombre del Producto</label>
                     </div>
-                    <div class="col l2 m2 s6">
+                    <div class="mb-3">
                         <input name="idcategoria" type="text" class="validate">
                         <?php echo $categoria ?>
                         <label>ID de Categoria</label>
                     </div>
-                    <div class="col l6 m6 s12">
+                    <div class="mb-3">
                         <input name="descripcion" type="text" class="validate">
                         <?php echo $descripcion?>
                         <label>Descripcion del Producto</label>
                     </div>
                 </div>
                 <div class="row">
-                <div class="col l3 m3 s6">
+                <div class="mb-3">
                         <input name="url_imagen" type="text" class="validate">
                         <?php echo $url_imagen ?>
                         <label>URL de Imagen</label>
                     </div>
-                    <div class="col l2 m2 s6">
+                    <div class="mb-3">
                         <input name="precio" type="text" class="validate">
                         <?php echo $precio ?>
                         <label>Precio</label>
                     </div>
-                    <div class="col l2 m2 s6">
+                    <div class="mb-3">
                         <input name="cantidad" type="text" class="validate">
                         <label>Cantidad</label>
                         <?php echo $cantidad ?>

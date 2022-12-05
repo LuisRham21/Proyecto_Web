@@ -39,7 +39,7 @@ global $urlweb;
                                 <td><img src="<?php echo $url_imagen ?>" width="150px" alt=""></td>
                                 <td class="text-center">L. <?php echo number_format($precio,2) ?></td>
                                 <td class="text-center"><?php echo $cantidad ?></td>
-                                <td><a href="<?php $urlweb ?>?modulo=editar_producto&idproducto=<?php echo $idproducto ?>" class="btn btn-warning text-dark fw-bold">Editar <i class="bi bi-pencil-square text-dark"></i></a></td>
+                                <td><a href="<?php $urlweb ?>?modulo=editar_producto&idproducto=<?php echo $idproducto ?>" class="btn btn-warning text-dark fw-bold ">Editar <i class="bi bi-pencil-square text-dark"></i></a></td>
                                 <td><a href="javascript:eliminar(<?php echo $idproducto ?>)" class="btn btn-danger text-dark fw-bold">Eliminar<i class="bi bi-trash3-fill text-dark"></i></a></td>
                             </tr>
                         <?php
