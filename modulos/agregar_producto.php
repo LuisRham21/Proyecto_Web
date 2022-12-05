@@ -4,30 +4,32 @@ global $urlweb;
 ?>
 
 <div class="alert container col-md-6 col-md-offset-3 shadow-lg p-3 mb-5 bg-body rounded ">
+<h3 class="alert text-center fw-bold fst-italic"> Crear Producto </h3>
+
     <form class="" method="POST">
         <div class="container row ">
             <div class="mb-3">
-                <label>Nombre del Producto</label>
+                <label class="fw-bold">Nombre del Producto:</label>
                 <input class="form-control" name="nombre_producto" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label>Id Categoria</label>
+                <label class="fw-bold">Id Categoria:</label>
                 <input class="form-control" name="idcategoria" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label>Descripcion del Producto</label>
+                <label>Descripcion del Producto:</label>
                 <textarea  class="form-control" name="descripcion" type="text" class="validate"></textarea>
             </div>
             <div class="mb-3">
-                <label>URL de Imagen</label>
+                <label class="fw-bold">URL de Imagen:</label>
                 <input class="form-control" name="url_imagen" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label>Precio</label>
+                <label class="fw-bold">Precio:</label>
                 <input class="form-control" name="precio" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label>Cantidad</label>
+                <label class="fw-bold">Cantidad:</label>
                 <input class="form-control" name="cantidad" type="text" class="validate">
             </div>
             <button class="btn btn-success " type="submit" name="agregar">Agregar Producto
@@ -36,7 +38,7 @@ global $urlweb;
         </div>
     </form>
     <div class="alert container col-md-6 col-md-offset-3">
-        <a class="btn btn-primary col-lg-9" href="?modulo=admin_producto"><i class="bi bi-arrow-left"></i> Volver atras</a>
+        <a class="btn btn-primary col-lg-9" href="?modulo=admin_producto"><i class="bi bi-arrow-left"></i> Volver atrás</a>
     </div>
 </div>
 

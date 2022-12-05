@@ -6,7 +6,7 @@ global $urlweb;
 <h3 class="text-center fw-bold fst-italic"><i class="bi bi-box2-fill"></i> Administrador de producto <i class="bi bi-box2-fill"></i></h3>
 <div class="row justify-content-end ">
         <div class="col-auto">
-            <a class="btn btn-success" href="<?php $urlweb ?>?modulo=agregaar" >Nuevo registro <i class="bi bi-plus-lg" ></i></a>
+            <a class="btn btn-success" href="<?php $urlweb ?>?modulo=agregar_producto" >Nuevo registro <i class="bi bi-plus-lg" ></i></a>
         </div>
     </div>
 <table class="table table-sm table-striped table-hover mt-4 table-bordered">

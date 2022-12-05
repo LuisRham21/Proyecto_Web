@@ -11,48 +11,43 @@ if($stmt = $mysqli->prepare($strsql)){
         $stmt->bind_result($idproducto, $nombre_producto, $categoria, $descripcion, $url_imagen, $precio, $cantidad);
         $stmt->fetch();
         ?>
-        <div class="alert container shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="alert container col-md-6 col-md-offset-3 shadow-lg p-3 mb-5 bg-body rounded">
+        <h3 class="alert text-center fw-bold fst-italic"> Editar Producto </h3>
             <form class="" method="POST">
                 <div class="row">
-                    <div class="col">
-                        <label>Nombre del Producto</label>
-                        <input name="nombre_producto" type="text" class="validate">
-                        <?php echo $nombre_producto ?>
+                    <div class="mb-3">
+                        <label class="fw-bold">Nombre del Producto:</label>
+                        <input class="form-control" name="nombre_producto" type="text" class="validate" value="<?php echo $nombre_producto ?>">
                     </div>
-                    <div class="col">
-                        <input name="idcategoria" type="text" class="validate">
-                        <?php echo $categoria ?>
-                        <label>ID de Categoria</label>
+                    <div class="mb-3">
+                        <label class="fw-bold">ID de Categoria:</label>
+                        <input class="form-control" name="idcategoria" type="text" class="validate" value="<?php echo $categoria ?>">
                     </div>
-                    <div class="col">
-                        <label>Descripcion del Producto</label>
-                        <input name="descripcion" type="text" class="validate">
-                        <?php echo $descripcion?>
+                    <div class="mb-3">
+                        <label class="fw-bold">Descripcion del Producto:</label>
+                        <textarea class="form-control" name="descripcion" type="text" class="validate"><?php echo $descripcion?></textarea>  
                     </div>
                 </div>
                 <div class="row">
-                <div class="col">
-                        <label>URL de Imagen</label>
-                        <input name="url_imagen" type="text" class="validate">
-                        <?php echo $url_imagen ?>
+                <div class="mb-3">
+                        <label class="fw-bold">URL de Imagen:</label>
+                        <input class="form-control" name="url_imagen" type="text" class="validate" value="<?php echo $url_imagen ?>">
                     </div>
-                    <div class="col">
-                        <label>Precio</label>
-                        <input name="precio" type="text" class="validate">
-                        <?php echo $precio ?>
+                    <div class="mb-3">
+                        <label class="fw-bold">Precio:</label>
+                        <input class="form-control" name="precio" type="text" class="validate" value="<?php echo $precio ?>">
                     </div>
-                    <div class="col">
-                        <label>Cantidad</label>
-                        <input name="cantidad" type="text" class="validate">
-                        <?php echo $cantidad ?>
+                    <div class="mb-3">
+                        <label class="fw-bold">Cantidad:</label>
+                        <input class="form-control" name="cantidad" type="text" class="validate" value="<?php echo $cantidad ?>">
                     </div>
-                    <button class="btn btn-primary" type="submit" name="edit">Actualizar Información de Producto
-                        <i class="btn btn-primary stretched-link">send</i>
+                    <button class="btn btn-success" type="submit" name="edit">Actualizar Datos 
+                        <i class="bi bi-cloud-upload"></i>
                     </button>
                 </div>
             </form>
-            <div>
-                <a class="btn btn-primary stretched-link" href="?modulo=admin_producto">Volver a Admin</a>
+            <div class="alert container col-md-6 col-md-offset-3">
+                <a class="btn btn-primary col-lg-9" href="?modulo=admin_producto"><i class="bi bi-arrow-left"></i> Volver atrás</a>
             </div>
         </div>
         <?php
