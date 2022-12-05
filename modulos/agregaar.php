@@ -3,7 +3,7 @@ global $mysqli;
 global $urlweb;
 ?>
 
-<div class="alert container col-md-6 col-md-offset-3 ">
+<div class="alert container col-md-6 col-md-offset-3 shadow-lg p-3 mb-5 bg-body rounded ">
     <form class="" method="POST">
         <div class="container row ">
             <div class="mb-3">
@@ -26,7 +26,7 @@ global $urlweb;
                 <label>Precio</label>
                 <input class="form-control" name="precio" type="text" class="validate">
             </div>
-            <div class="mb-3 col-lg-8">
+            <div class="mb-3">
                 <label>Cantidad</label>
                 <input class="form-control" name="cantidad" type="text" class="validate">
             </div>
@@ -74,3 +74,7 @@ global $urlweb;
         }
     }
 ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
