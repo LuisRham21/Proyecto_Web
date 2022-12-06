@@ -54,11 +54,9 @@
           <div class="btn-group" role="group" aria-label="Basic example">
             <li class="nav-item dropdown btn-lg" style="list-style-type: none;">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="bi bi-person-circle"></span>
+                <span class="bi bi-grid-fill"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
-                <li><a class="dropdown-item" href="#">Crear cuenta</a></li> 
                 <li><a class="dropdown-item" href="?modulo=admin_producto">Administrador de Productos</a></li>
                 <li><a class="dropdown-item" href="?modulo=admin_categoria">Administración de Categorías</a></li>
               </ul>
