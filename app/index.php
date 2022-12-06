@@ -121,16 +121,16 @@
                 Products
               </h6>
               <p>
-                <a href="#!" class="text-reset">Samsung</a>
+                <a href="?modulo=marcas&idcategoria=2451" class="text-reset">Samsung</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Apple</a>
+                <a href="?modulo=marcas&idcategoria=2452" class="text-reset">Apple</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Google</a>
+                <a href="?modulo=marcas&idcategoria=2456" class="text-reset">Google</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">OnePlus</a>
+                <a href="?modulo=marcas&idcategoria=2453" class="text-reset">OnePlus</a>
               </p>
             </div>
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">

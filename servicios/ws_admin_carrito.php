@@ -44,7 +44,6 @@ try {
     case 'default':
       break;
   }
-
   $jsonreturn = array(
     "text" => $text
   );

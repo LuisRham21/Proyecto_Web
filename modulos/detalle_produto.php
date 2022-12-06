@@ -39,7 +39,7 @@ $idproducto = $_GET['idproducto'];
                                             <input id="cantidad" class="input-text qty text-center" type="text" title="cantidad" value="1" name="cantidad">
                                             <button class="btn btn-dark qty-increase" onclick="var qty_el = document.getElementById('cantidad'); var qty = qty_el.value; if( !isNaN( qty )) qty_el.value++;return false;" type="button"><i class="bi bi-arrow-right-circle"></i></button>
                                         </div>
-                                        <a href="<?php $urlweb ?>?modulo=carrito&idproducto=<?php echo $idproducto ?>" class="btn btn-danger">Agregar al carrito <span class="bi bi-cart-fill"></span></a>
+                                        <a href="#" class="btn btn-danger">Agregar al carrito <span class="bi bi-cart-fill"></span></a>
                                     </div>
                                 </div>
                                 <div class="alert col-lg-10">
