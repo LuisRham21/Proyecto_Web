@@ -1,8 +1,8 @@
 <?php
 
 $hostname = "localhost";
-$database = "desarollo_aplicaciones";
-        $username = "root";
+$database = "id19971368_desarollo_aplicaciones";
+$username = "id19971368_root";
 $password = "";
 
 $mysqli = new mysqli($hostname, $username, $password, $database);
@@ -10,5 +10,5 @@ $mysqli = new mysqli($hostname, $username, $password, $database);
     if($mysqli->connect_errno){
         echo $mysqli->connect_error;
     }
-$urlweb = "http://localhost/2022-3/proyecto_web/"
+$urlweb = "https://proyecto-web-2022.000webhostapp.com/"
 ?>

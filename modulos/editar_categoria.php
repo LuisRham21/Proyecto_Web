@@ -52,7 +52,9 @@ if($stmt = $mysqli->prepare($strsql)){
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto actualizado de Manera Exitosa</h3>
+                <div class="alert alert-success" role="alert">
+                Categoria editado de Manera Exitosa!!
+                </div>
                 <?php
                 mysqli_close($mysqli);
             } else {
@@ -62,7 +64,9 @@ if($stmt = $mysqli->prepare($strsql)){
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <div class="alert alert-success" role="alert">
+            Debe de llenar todos los campos!!
+            </div>
             <?php
         }
     }
