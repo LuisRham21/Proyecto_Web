@@ -86,7 +86,7 @@ global $mysqli
         </div>
       </div>
       <div class="container text-center">
-        <h2 class="text-center"> ¿Qué marca de celular estás buscando? </h2>
+        <h2 class="text-center"> Comprar por Categoría </h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <?php
             $strsql = "SELECT `idcategoria`, `nombre_categoria`, `url_imagen` FROM `categorias` LIMIT 4";

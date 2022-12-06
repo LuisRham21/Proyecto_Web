@@ -71,15 +71,12 @@
           </div>
         </div>
       </nav>
-    <!-- Second Nav-Bar -->
-    
-
-    <!-- Modulos -->
-    <div class="container">
+  </div>
+  <!-- Modulos -->
+  <div class="container">
         <?php $funciones->openModule($modulo);?>
     </div>
-
-
+</div>
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
       <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
