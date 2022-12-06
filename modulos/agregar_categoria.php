@@ -43,7 +43,9 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto agregado de Manera Exitosa</h3>
+                <div class="alert alert-success" role="alert">
+                Categoria agregado de Manera Exitosa!!
+                </div>
                 <?php
                 mysqli_close($mysqli);
             } else {
@@ -53,7 +55,9 @@ global $urlweb;
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <div class="alert alert-danger" role="alert">
+            Debe de llenar todos los campos!!
+            </div>
             <?php
         }
     }
