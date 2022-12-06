@@ -76,7 +76,7 @@ global $mysqli
         </div>
       </div>
       <div class="alert container text-center">
-        <h2 class="text-center"> Novedades del mes </h2>
+        <h2 class="text-center"> Productos Nuevos </h2>
         <div class="row">
           <div class="col">
             <img src="app/img/apple14.jpg" class="alert img-fluid" alt="...">
