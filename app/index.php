@@ -68,7 +68,7 @@
                         <li><a class="dropdown-item" href="?modulo=admin_categoria">Administración de Categorías</a></li>
                       </ul>
                     </li>
-                    <a href="#" class="btn btn-dark btn-lg"><span class="bi bi-cart-fill"></span></a>
+                    <a href="<?php $urlweb ?>?modulo=carrito" class="btn btn-dark btn-lg"><span class="bi bi-cart-fill"></span></a>
                   </div>
             </form>
           </div>
