@@ -33,9 +33,9 @@ global $mysqli
     </button>
 </div>
 <!-- Lo mas Buscado -->
-<div class="container shadow p-3 mb-5 bg-body rounded">
+<div class="container shadow p-3 mb-5 rounded bg-success p-2 text-dark bg-opacity-10">
   <div class="alert container text-center">
-    <h2 class="text-left">Los más buscados en Tienda en Línea</h2>
+    <h2 class="alert text-left">Los más buscados en Tienda en Línea</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <?php
     $strsql = "SELECT `idproducto`, `nombre_producto`, `idcategoria`, `descripcion`, `precio`, `url_imagen` FROM `productos` LIMIT 4";
@@ -47,7 +47,7 @@ global $mysqli
         while ($stmt->fetch()){
           ?>
           <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
-          <div class="col text-dark fw-semibold">
+          <div class="col text-dark fw-semibold shadow-sm p-3 mb-5 bg-body rounded">
             <img src="<?php echo $url_imagen ?>" class="img-fluid" alt="...">
             <p><?php echo $nombre_producto ?></p>
             <p><?php echo "L ".number_format($precio, 2) ?></p>
@@ -62,33 +62,204 @@ global $mysqli
   </div>
 </div>
 <!-- Mejores marcas -->
-<div class="container shadow p-3 mb-5 bg-body rounded">
-  <div class="container text-center">
-    <h2 class="text-left"> Las mejores marcas </h2>
+<div class="container shadow p-3 mb-5 rounded bg-success p-2 text-dark bg-opacity-10">
+  <div class="alert container text-center">
+    <h2 class="alert text-left"> Oportunidades Imperdibles </h2>
     <div class="row">
-      <div class="col-6 col-sm6">
-        <img src="app/img/samsung.jpg" class="img-fluid" alt="...">
-        <h4 class="text-center"> Samsung </h4>
+      <div class="col">
+          <?php
+          $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=2";
+          if ($stmt = $mysqli->prepare($strsql)){
+            $stmt->execute();
+            $stmt->store_result();
+            if ($stmt->num_rows > 0){
+              $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+              while ($stmt->fetch()){
+                ?>
+                <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                    <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                    <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                    <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                  </div>
+                </a>
+                <?php
+              }
+            } 
+          }
+          ?>
+        </div>
+        <div class="col">
+        <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=3";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
       </div>
-      <div class="col-6 col-sm-6">
-        <img src="app/img/apple.jpg" class="img-fluid" alt="...">
-        <h4 class="text-center"> iPhone </h4>
+        <div class="col">
+        <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=7";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
+      </div>
+        <div class="col">
+        <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=4";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
       </div>
     </div>
   </div>
   <div class="alert container text-center">
-    <h2 class="text-center"> Novedades del mes </h2>
-    <div class="row">
+    <h2 class="alert text-center"> Productos Nuevos </h2>
+    <div class="row ">
       <div class="col">
-        <img src="app/img/apple14.jpg" class="alert img-fluid" alt="...">
-        <p>iPhone 14</p>
-        <p>$799.00</p>
+        <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=10";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
+      </div>
+      <div class="col">
+      <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=20";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
+      </div>
+      <div class="col">
+      <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=21";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
+      </div>
+      <div class="col">
+      <?php
+        $strsql = "SELECT `idproducto`, `nombre_producto`, `precio`, `url_imagen` FROM `productos` WHERE `idproducto`=22";
+        if ($stmt = $mysqli->prepare($strsql)){
+          $stmt->execute();
+          $stmt->store_result();
+          if ($stmt->num_rows > 0){
+            $stmt->bind_result($idproducto, $nombre_producto, $precio, $url_img);
+            while ($stmt->fetch()){
+              ?>
+              <a href="?modulo=detalle_produto&idproducto=<?php echo $idproducto ?>">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                  <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
+                  <p class="text-dark fw-semibold"><?php echo $nombre_producto ?></p>
+                  <p class="text-dark fw-semibold"><?php echo "L ".number_format($precio, 2) ?></p>
+                </div>
+              </a>
+              <?php
+            }
+          } 
+        }
+        ?>
       </div>
     </div>
   </div>
   <div class="container text-center">
-    <h2 class="text-center"> ¿Qué marca de celular estás buscando? </h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <h2 class="alert text-center"> Comprar por Categoría </h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
       <?php
       $strsql = "SELECT `idcategoria`, `nombre_categoria`, `url_imagen` FROM `categorias` LIMIT 4";
       if ($stmt = $mysqli->prepare($strsql)){
@@ -99,7 +270,7 @@ global $mysqli
           while ($stmt->fetch()){
             ?>
             <a href="?modulo=marcas&idcategoria=<?php echo $idcategoria ?>">
-              <div class="col">
+              <div class="col shadow-sm p-3 mb-5 bg-body rounded">
                 <img src="<?php echo $url_img ?>" class="img-fluid" alt="...">
                 <p class="text-dark fw-semibold"><?php echo $nombre_categoria ?></p>
               </div>
@@ -112,6 +283,7 @@ global $mysqli
     </div>
   </div>
 </div>
+
 <!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

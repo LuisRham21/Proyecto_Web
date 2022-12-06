@@ -35,7 +35,7 @@ global $urlweb;
                                     <td ><?php echo $nombre_categoria ?></td>
                                     <td width="600px"><?php echo $descripcion ?></td>
                                     <td class="text-center"><img src="<?php echo $url_imagen ?>" width="100px" alt=""></td>
-                                    <td><a href="<?php $urlweb ?>?modulo=editar_categoria&idcategoria=<?php echo $idcategoria ?>" class="btn btn-warning text-dark fw-bold ">Editar <i class="bi bi-pencil-square text-dark"></i></a></td>
+                                    <td class="text-center"><a href="<?php $urlweb ?>?modulo=editar_categoria&idcategoria=<?php echo $idcategoria ?>" class="btn btn-warning text-dark fw-bold ">Editar <i class="bi bi-pencil-square text-dark"></i></a></td>
                                     <td class="text-center"><a class="btn btn-danger editbtn" href="javascript:eliminar(<?php echo $idcategoria ?>)">Eliminar <i class="bi bi-trash-fill"></i></a></td>
                                 </tr>
                             <?php
